@@ -1,0 +1,97 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+  }
+  
+
+  
+  /* Main Container */
+  .main-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 20px;
+    perspective: 1000px; /* Adds perspective for 3D effect */
+  }
+  
+  /* Content and Card Styles */
+  .content {
+    flex: 3;
+    margin-right: 20px;
+  }
+  
+  /* Card Styles */
+  .card {
+    background: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgb(8 131 254);
+    transform-style: preserve-3d;
+    transition: transform 0.5s, box-shadow 0.5s;
+  }
+  
+  .card:hover {
+    /* transform: rotateY(1deg); */
+    box-shadow: 0 8px 16px rgb(239 0 0);
+}
+
+
+  
+  /* Post Styles */
+  .post h2 {
+    margin: 0 0 10px;
+    color: #333;
+  }
+  
+  .post-content {
+    line-height: 1.6;
+  }
+  
+  /* Sidebar */
+  .sidebar {
+    flex: 1;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* List Item Icon */
+  .sidebar ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .sidebar li {
+    margin-bottom: 29px;
+    position: relative;
+    padding-left: 30px; /* Space for icon */
+  }
+  
+  .sidebar li::before {
+    content: "🚀 "; /* Rocket icon */
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 20px; /* Adjust icon size */
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .main-container {
+      flex-direction: column;
+      margin: 10px;
+    }
+  
+    .content {
+      margin-right: 0;
+    }
+  
+    .sidebar {
+      margin-bottom: 20px;
+    }
+  }
+  
